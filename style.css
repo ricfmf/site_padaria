@@ -1,0 +1,250 @@
+/* Variáveis de Cores baseadas no logo */
+:root {
+    --marrom-escuro: #3e2723; /* Fundo da segunda imagem */
+    --dourado: #c5a059;       /* Cor dos detalhes/letras */
+    --bege-claro: #f5f5dc;    /* Fundo suave para contraste */
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--marrom-escuro);
+    background-color: var(--bege-claro);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header & Navegação */
+header {
+    background-color: var(--marrom-escuro);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--dourado);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--dourado);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--branco);
+}
+
+/* Seção Hero */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), 
+                url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1350&q=80'); /* Imagem de fundo temática */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--dourado);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--marrom-escuro);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #d4b475;
+}
+
+/* Seção Sobre */
+.about {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--marrom-escuro);
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--dourado);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--marrom-escuro);
+    color: var(--dourado);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 80px 20px;
+    background-color: var(--marrom-escuro); /* Fundo escuro para destacar o dourado */
+    color: var(--dourado);
+}
+
+.contact h2, .contact h3 {
+    color: var(--branco);
+    margin-bottom: 15px;
+}
+
+.address-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    font-size: 1.1rem;
+}
+
+.icon {
+    stroke: var(--dourado);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid var(--dourado);
+    color: var(--dourado);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--dourado);
+    color: var(--marrom-escuro);
+}
+
+.hours ul {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.hours ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgba(197, 160, 89, 0.3);
+    padding-bottom: 5px;
+}
+
+.hours span {
+    font-weight: bold;
+}
+
+/* Ajuste de responsividade para o container de contato */
+@media (max-width: 768px) {
+    .contact .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .address-box {
+        justify-content: center;
+    }
+}
+
+/* Destaque para o link do Instagram no Menu */
+.nav-instagram {
+    border: 1px solid var(--dourado);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-instagram:hover {
+    background-color: var(--dourado);
+    color: var(--marrom-escuro) !important;
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #2b1b19; /* Um marrom um pouco mais escuro que o logo */
+    color: var(--dourado);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid var(--dourado);
+}
+
+.social-links a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--dourado);
+    text-decoration: underline;
+}
